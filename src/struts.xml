@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd" >
+<struts>
+	<package name="lxw" namespace="/" extends="struts-default">
+		<action name="login" class="org.wuhanjj.action.LoginAction">
+			<result name="success_T" type="redirect">/userCenter_T.jsp</result>
+			<result name="success_S" type="redirect">/userCenter_S.jsp</result>
+			<result name="input" type="redirect">/login.jsp</result>
+		</action>
+		
+		<action name="register" class="org.wuhanjj.action.RegisterAction">
+			<result name="success_T" type="redirect">/userCenter_T.jsp</result>
+			<result name="success_S" type="redirect">/userCenter_S.jsp</result>
+			<result name="input" type="redirect">/register.jsp</result>
+		</action>
+		
+		<action name="getTeachLevelAction" class="org.wuhanjj.action.TeachLevelAction" method="getTeachLevel">
+			
+		</action>
+		
+		<action name="getTeachTypeAction" class="org.wuhanjj.action.TeachTypeAction" method="getTeachType">
+			
+		</action>
+		
+		<action name="insertTeachMsgAction" class="org.wuhanjj.action.TeachMsgAction" method="insertTeachMsg">
+			
+			<result name="success" type="redirect">/addTeachMsg.jsp</result>
+		</action>
+		
+		
+		<action name="getTeachMsgAction" class="org.wuhanjj.action.TeachMsgAction" method="getTeachMsg">
+		</action>
+		
+		<action name="getTeachMsgByTitleOrTeacherAction" class="org.wuhanjj.action.TeachMsgAction" >
+			<result name="success" type="redirect">/showTeachMsg.jsp</result>
+		</action>
+		
+		
+		<action name="getOwnTeachMsgAction" class="org.wuhanjj.action.TeachMsgAction" method="getOwnTeachMsg">
+		</action>
+		
+		<action name="getTeachMsgBySelectedAction" class="org.wuhanjj.action.TeachMsgAction" method="getTeachMsgBySelected">
+		</action>
+		<action name="deleteTeachMsg" class="org.wuhanjj.action.TeachMsgAction" method="deleteTeachMsg">
+		</action>
+		
+		<action name="changeUserMsgAction" class="org.wuhanjj.action.UserAction" method="changeUserMsg">
+		</action>
+		
+		<action name="getJoinTeachMsgAction" class="org.wuhanjj.action.JoinTeachAction" method="getJoinTeachMsg">
+		</action>
+		<action name="joinTeachAction" class="org.wuhanjj.action.JoinTeachAction" method="joinTeach">
+		</action>
+		
+		<action name="getSaveTeachMsgAction" class="org.wuhanjj.action.SaveTeachAction" method="getSaveTeachMsg">
+		</action>
+		<action name="saveTeachAction" class="org.wuhanjj.action.SaveTeachAction" method="saveTeach">
+		</action>
+		
+		
+		<action name="logoutAction" class="org.wuhanjj.action.LogoutAction">
+			<result name="success" type="redirect">/main.jsp</result>
+			
+		</action>
+	</package>
+</struts>

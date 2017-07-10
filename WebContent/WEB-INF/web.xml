@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>FindTeacher</display-name>
+  <welcome-file-list>
+    <welcome-file>main.jsp</welcome-file>
+  </welcome-file-list>
+ 	<filter>
+		<filter-name>struts</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+ <!-- 配置登录过滤器 -->
+	<!--<filter>
+		<filter-name>siteFilter</filter-name>
+		<filter-class>org.wuhanjj.filter.SiteFilter</filter-class>
+		<init-param>
+			配置不过滤的类型请求
+			<param-name>ignore</param-name>
+			<param-value>css,js</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>siteFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping> -->
+</web-app>
